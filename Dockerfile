@@ -57,4 +57,7 @@ USER nobody:nobody
 # Only copy the final release from the build stage
 COPY --from=builder --chown=nobody:nobody /app/_build/prod/rel/eren ./
 
-CMD ["/app/bin/server"]
+CMD /app/bin/eren start
+
+# Appended by flyctl
+ENV ERL_AFLAGS "-proto_dist inet6_tcp"
