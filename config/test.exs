@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :eren, Eren.Repo,
   database: ":memory:",
-  pool_size: 20,
+  pool_size: 10,
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
