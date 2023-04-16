@@ -9,10 +9,6 @@ config :eren, Eren.Repo,
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
-#
-# The watchers configuration can be used to run external
-# watchers to your application. For example, we use it
-# with esbuild to bundle .js and .css sources.
 config :eren, ErenWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
@@ -22,8 +18,8 @@ config :eren, ErenWeb.Endpoint,
   debug_errors: true,
   secret_key_base: "sIkbRQQL1/UhgQR4aycshUjsn0CtKDJgENWTNYvSKWOoG7Wmnbbyi5X0I44px+T+",
   watchers: [
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
-    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
+    npm: ["run", "watch:js", cd: Path.expand("../assets", __DIR__)],
+    npm: ["run", "watch:css", cd: Path.expand("../assets", __DIR__)]
   ]
 
 # ## SSL Support
