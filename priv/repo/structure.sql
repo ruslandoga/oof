@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS "schema_migrations" ("version" INTEGER PRIMARY KEY, "inserted_at" TEXT);
+CREATE TABLE IF NOT EXISTS "events" ("id" BLOB PRIMARY KEY, "original_id" BLOB, "items" TEXT) WITHOUT ROWID, STRICT;
+INSERT INTO schema_migrations VALUES(20230416081220,'2023-04-16T08:14:20');
