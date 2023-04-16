@@ -1,13 +1,9 @@
 import Config
 
 # Configure your database
-#
-# The MIX_TEST_PARTITION environment variable can be used
-# to provide built-in test partitioning in CI environment.
-# Run `mix help test` for more information.
 config :eren, Eren.Repo,
-  database: Path.expand("../eren_test.db", Path.dirname(__ENV__.file)),
-  pool_size: 5,
+  database: ":memory:",
+  pool_size: 20,
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,
