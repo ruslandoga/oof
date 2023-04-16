@@ -109,3 +109,16 @@ if config_env() == :prod do
   #
   # See https://hexdocs.pm/swoosh/Swoosh.html#module-installation for details.
 end
+
+if config_env() == :test do
+  migrations = Migrator.migrations(Eren.Repo)
+
+  config :eren, Eren.Repo,
+    after_connect: fn conn ->
+      Migrator.prepare(conn: conn, repo: Eren.Repo)
+
+      Enum.each(migrations, fn {version, mod} ->
+        Ecto.Migration.Runner.run(Migrator, [], version, mod, :forward, :change, :up, [])
+      end)
+    end
+end

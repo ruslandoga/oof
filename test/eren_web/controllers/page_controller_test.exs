@@ -1,5 +1,5 @@
 defmodule ErenWeb.PageControllerTest do
-  use ErenWeb.ConnCase
+  use ErenWeb.ConnCase, async: true
 
   test "GET /", %{conn: conn} do
     conn = get(conn, ~p"/")
