@@ -1,4 +1,4 @@
-`eren` is a drop-in self-hosted [Sentry](https://sentry.io) clone.
+`eren` is a self-hosted [Sentry](https://sentry.io) copycat.
 
 Demo: https://eren.fly.dev
 
