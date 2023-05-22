@@ -1,4 +1,4 @@
-`eren` is a self-hosted [Sentry](https://sentry.io) copycat.
+`oof` is a self-hosted [Sentry](https://sentry.io) copycat.
 
 Demo: https://eren.fly.dev
 
