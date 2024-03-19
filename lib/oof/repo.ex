@@ -1,5 +1,5 @@
-defmodule Eren.Repo do
+defmodule Oof.Repo do
   use Ecto.Repo,
-    otp_app: :eren,
+    otp_app: :oof,
     adapter: Ecto.Adapters.SQLite3
 end

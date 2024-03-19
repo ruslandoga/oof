@@ -1,4 +1,4 @@
-defmodule Eren.Events do
+defmodule Oof.Events do
   @moduledoc "Processing for events coming from Sentry clients"
   alias __MODULE__.Event
 
@@ -34,7 +34,7 @@ defmodule Eren.Events do
   def insert_event(event) do
     event
     |> event_changeset()
-    |> Eren.Repo.insert()
+    |> Oof.Repo.insert()
   end
 
   def event_changeset(event) do

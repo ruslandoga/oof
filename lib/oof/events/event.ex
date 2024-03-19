@@ -1,4 +1,4 @@
-defmodule Eren.Events.Event do
+defmodule Oof.Events.Event do
   @moduledoc false
   use Ecto.Schema
 

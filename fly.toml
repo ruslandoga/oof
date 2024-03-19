@@ -1,22 +1,20 @@
-# fly.toml file generated for eren on 2023-04-16T13:52:02+07:00
-
-app = "eren"
+app = "oof"
 kill_signal = "SIGTERM"
 kill_timeout = 5
 processes = []
 
 [build]
-  image = "ghcr.io/ruslandoga/eren:master"
+  image = "ghcr.io/ruslandoga/oof:master"
 
 [deploy]
   release_command = "/app/bin/migrate"
 
 [env]
-  PHX_HOST = "eren.fly.dev"
+  PHX_HOST = "oof.fly.dev"
   PHX_SERVER = true
   POOL_SIZE = 10
   PORT = "8080"
-  DATABASE_PATH = "/app/eren.db"
+  DATABASE_PATH = "/app/oof.db"
 
 [experimental]
   auto_rollback = true

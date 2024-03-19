@@ -1,4 +1,4 @@
-defmodule ErenWeb.ConnCase do
+defmodule OofWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule ErenWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ErenWeb.ConnCase, async: true`, although
+  by setting `use OofWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -20,19 +20,19 @@ defmodule ErenWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint ErenWeb.Endpoint
+      @endpoint OofWeb.Endpoint
 
-      use ErenWeb, :verified_routes
+      use OofWeb, :verified_routes
 
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import ErenWeb.ConnCase
+      import OofWeb.ConnCase
     end
   end
 
   setup tags do
-    Eren.DataCase.setup_sandbox(tags)
+    Oof.DataCase.setup_sandbox(tags)
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end

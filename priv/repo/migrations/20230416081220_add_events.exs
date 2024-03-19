@@ -1,4 +1,4 @@
-defmodule Eren.Repo.Migrations.AddEvents do
+defmodule Oof.Repo.Migrations.AddEvents do
   use Ecto.Migration
 
   def change do

@@ -1,8 +1,8 @@
-defmodule Eren.EventsTest do
-  use Eren.DataCase, async: true
+defmodule Oof.EventsTest do
+  use Oof.DataCase, async: true
 
-  alias Eren.Events
-  alias Eren.Events.Event
+  alias Oof.Events
+  alias Oof.Events.Event
 
   describe "decode_envelop/1" do
     # examples from https://develop.sentry.dev/sdk/envelopes/

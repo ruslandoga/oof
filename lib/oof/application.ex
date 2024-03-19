@@ -1,4 +1,4 @@
-defmodule Eren.Application do
+defmodule Oof.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -9,22 +9,22 @@ defmodule Eren.Application do
   def start(_type, _args) do
     children = [
       # Start the Telemetry supervisor
-      ErenWeb.Telemetry,
+      OofWeb.Telemetry,
       # Start the Ecto repository
-      Eren.Repo,
+      Oof.Repo,
       # Start the PubSub system
-      {Phoenix.PubSub, name: Eren.PubSub},
+      {Phoenix.PubSub, name: Oof.PubSub},
       # Start Finch
-      {Finch, name: Eren.Finch},
+      {Finch, name: Oof.Finch},
       # Start the Endpoint (http/https)
-      ErenWeb.Endpoint
-      # Start a worker by calling: Eren.Worker.start_link(arg)
-      # {Eren.Worker, arg}
+      OofWeb.Endpoint
+      # Start a worker by calling: Oof.Worker.start_link(arg)
+      # {Oof.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Eren.Supervisor]
+    opts = [strategy: :one_for_one, name: Oof.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
@@ -32,7 +32,7 @@ defmodule Eren.Application do
   # whenever the application is updated.
   @impl true
   def config_change(changed, _new, removed) do
-    ErenWeb.Endpoint.config_change(changed, removed)
+    OofWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

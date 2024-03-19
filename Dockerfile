@@ -55,9 +55,9 @@ RUN chown nobody:nobody /app
 USER nobody:nobody
 
 # Only copy the final release from the build stage
-COPY --from=builder --chown=nobody:nobody /app/_build/prod/rel/eren ./
+COPY --from=builder --chown=nobody:nobody /app/_build/prod/rel/oof ./
 
-CMD /app/bin/eren start
+CMD /app/bin/oof start
 
 # Appended by flyctl
 ENV ERL_AFLAGS "-proto_dist inet6_tcp"

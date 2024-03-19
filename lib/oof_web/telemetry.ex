@@ -1,4 +1,4 @@
-defmodule ErenWeb.Telemetry do
+defmodule OofWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -52,23 +52,23 @@ defmodule ErenWeb.Telemetry do
       ),
 
       # Database Metrics
-      summary("eren.repo.query.total_time",
+      summary("oof.repo.query.total_time",
         unit: {:native, :millisecond},
         description: "The sum of the other measurements"
       ),
-      summary("eren.repo.query.decode_time",
+      summary("oof.repo.query.decode_time",
         unit: {:native, :millisecond},
         description: "The time spent decoding the data received from the database"
       ),
-      summary("eren.repo.query.query_time",
+      summary("oof.repo.query.query_time",
         unit: {:native, :millisecond},
         description: "The time spent executing the query"
       ),
-      summary("eren.repo.query.queue_time",
+      summary("oof.repo.query.queue_time",
         unit: {:native, :millisecond},
         description: "The time spent waiting for a database connection"
       ),
-      summary("eren.repo.query.idle_time",
+      summary("oof.repo.query.idle_time",
         unit: {:native, :millisecond},
         description:
           "The time the connection spent waiting before being checked out for the query"
@@ -86,7 +86,7 @@ defmodule ErenWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {ErenWeb, :count_users, []}
+      # {OofWeb, :count_users, []}
     ]
   end
 end

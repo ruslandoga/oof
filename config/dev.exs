@@ -1,15 +1,15 @@
 import Config
 
 # Configure your database
-config :eren, Eren.Repo,
-  database: Path.expand("../eren_dev.db", Path.dirname(__ENV__.file)),
+config :oof, Oof.Repo,
+  database: Path.expand("../oof_dev.db", Path.dirname(__ENV__.file)),
   pool_size: 5,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
-config :eren, ErenWeb.Endpoint,
+config :oof, OofWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -46,17 +46,16 @@ config :eren, ErenWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :eren, ErenWeb.Endpoint,
+config :oof, OofWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/eren_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/oof_web/(controllers|live|components)/.*(ex|heex)$"
     ]
   ]
 
 # Enable dev routes for dashboard and mailbox
-config :eren, dev_routes: true
+config :oof, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

@@ -7,17 +7,17 @@
 # General application configuration
 import Config
 
-config :eren,
-  ecto_repos: [Eren.Repo]
+config :oof,
+  ecto_repos: [Oof.Repo]
 
 # Configures the endpoint
-config :eren, ErenWeb.Endpoint,
+config :oof, OofWeb.Endpoint,
   url: [host: "localhost"],
   render_errors: [
-    formats: [html: ErenWeb.ErrorHTML, json: ErenWeb.ErrorJSON],
+    formats: [html: OofWeb.ErrorHTML, json: OofWeb.ErrorJSON],
     layout: false
   ],
-  pubsub_server: Eren.PubSub,
+  pubsub_server: Oof.PubSub,
   live_view: [signing_salt: "DX/4UIEw"]
 
 # Configures the mailer
@@ -27,7 +27,7 @@ config :eren, ErenWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :eren, Eren.Mailer, adapter: Swoosh.Adapters.Local
+config :oof, Oof.Mailer, adapter: Swoosh.Adapters.Local
 
 # Configures Elixir's Logger
 config :logger, :console,

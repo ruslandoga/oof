@@ -1,6 +1,6 @@
-defmodule Eren do
+defmodule Oof do
   @moduledoc """
-  Eren keeps the contexts that define your domain
+  Oof keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

@@ -1,9 +1,9 @@
-defmodule Eren.Release do
+defmodule Oof.Release do
   @moduledoc """
   Used for executing DB release tasks when run in production without Mix
   installed.
   """
-  @app :eren
+  @app :oof
 
   def migrate do
     load_app()

@@ -1,11 +1,11 @@
-defmodule ErenWeb.Router do
-  use ErenWeb, :router
+defmodule OofWeb.Router do
+  use OofWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {ErenWeb.Layouts, :root}
+    plug :put_root_layout, {OofWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,19 +14,19 @@ defmodule ErenWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ErenWeb do
+  scope "/", OofWeb do
     pipe_through :browser
 
     get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ErenWeb do
+  # scope "/api", OofWeb do
   #   pipe_through :api
   # end
 
   # Enable Swoosh mailbox preview in development
-  if Application.compile_env(:eren, :dev_routes) do
+  if Application.compile_env(:oof, :dev_routes) do
     scope "/dev" do
       pipe_through :browser
 
