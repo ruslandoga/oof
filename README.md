@@ -12,7 +12,7 @@ Demo: https://oof.fly.dev
 Key features:
 
 - supports (almost) all Sentry clients
-- simple deployment (single container, uses SQLite, optionally replicates to S3)
+- simple deployment (single container, uses SQLite and embedded ClickHouse, optionally replicates to S3-compatible object storage)
 - (optional) ChatGPT-style error explainer
 - (optional) Telegram integration
 - email notifications
