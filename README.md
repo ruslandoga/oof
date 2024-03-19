@@ -10,3 +10,5 @@ Key features:
 - (optional) Telegram integration
 - email notifications
 - performant (TODO: benchmarks) and memory efficient (can be hosted on free-tier [Fly.io](https://fly.io))
+
+Oof dreams of understanding applications and why they hurt.
