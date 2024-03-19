@@ -1,5 +1,12 @@
 `oof` is a self-hosted [Sentry](https://sentry.io) copycat.
 
+TOBE:
+- status page
+- metrics sink / collector
+- logs sink / collector
+- dashboards?
+- load testing tool?
+
 Demo: https://oof.fly.dev
 
 Key features:
